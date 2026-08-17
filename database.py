@@ -6,11 +6,12 @@ class Database:
         self.tables = []
 
     def create_table(self, name):
+        table_exists = False
         for table in self.tables:
             if table.name == name:
-                print("Esta tabela já existe no banco")    
+                table_exists = True                
                 return
-            else:    
-                self.tables.append(Table(name))
-                print(f"Tabela {name} criada com sucesso!")
-                return
+        if table_exists == False:    
+            self.tables.append(Table(name))
+           
+                
