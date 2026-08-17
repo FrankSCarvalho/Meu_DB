@@ -5,6 +5,5 @@ class Database:
         self.name = name
         self.tables = []
 
-    def create_table(self, name):
-        self.table = Table(name)
-        self.tables.append(self.table)
+    def create_table(self, name):        
+        self.tables.append(Table(name))
