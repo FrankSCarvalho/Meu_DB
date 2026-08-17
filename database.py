@@ -1,4 +1,5 @@
 
 class Database:
-    def __init__(self, nome):
-        self.nome = nome
+    def __init__(self, name):
+        self.name = name
+        self.table = []
