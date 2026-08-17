@@ -9,8 +9,9 @@ class Database:
         table_exists = False
         for table in self.tables:
             if table.name == name:
-                table_exists = True                
-                return
+                table_exists = True
+                break               
+                
         if table_exists == False:    
             self.tables.append(Table(name))
            
